@@ -7,8 +7,8 @@ class Data_base:
          self.mys={
                'user':'mahdi',
                'host':'localhost',
-               'password':'MahdiAttarzade2002',
-               'database':'bama_site',
+               'password:***********',
+               'database':**********',
                'charset':'utf8mb4',
                'collation':'utf8mb4_unicode_ci' }
     
