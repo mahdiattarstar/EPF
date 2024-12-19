@@ -26,10 +26,10 @@ class Extract_data:
             page_source=driver.page_source
             driver.quit()
         except requests.exceptions.HTTPError as e:
-            print('noo')
+            print(e)
             return
         except requests.exceptions.RequestException as e:
-            print('its imposible')
+            print(e)
             return
         self.findall(page_source)
 
@@ -51,7 +51,7 @@ class Extract_data:
     def extract(self, information):
 #extracing just an specific value
     
-        car = information.find('span', class_='text')
+        car = information.select_one('span.text> span:nth-child(3)')
         year = information.select_one('div.bama-ad__detail-row > span:first-child')
         operation = information.find('span', class_='dir-ltr')
         price = information.find('div', class_='bama-ad__price-holder')
